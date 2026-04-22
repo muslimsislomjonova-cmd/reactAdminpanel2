@@ -1,0 +1,147 @@
+$bg-color: #0d0d12;      
+$purple: #9d5cf6;   
+$card-bg: #1a1a2e;     
+$purple-hover: #b182f8;  
+$text-white: #ffffff;
+$text-dim: #a0a0b0;      
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: $bg-color;
+  color: $text-white;
+}
+
+
+.app {
+  display: flex;
+  height: 100vh;
+
+
+  .sidebar {
+    width: 240px !important; 
+    background-color: $card-bg !important;
+    border-right: 1px solid #2d2d3d;
+    padding: 20px;
+
+    div {
+      padding: 12px 15px;
+      margin-bottom: 8px;
+      border-radius: 10px;
+      color: $text-dim;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: rgba($purple, 0.1);
+        color: $purple;
+      }
+
+      &.active { 
+        background-color: $purple;
+        color: white;
+      }
+    }
+  }
+
+
+  .main {
+    flex: 1;
+    background-color: $bg-color;
+    
+    .topbar {
+      background-color: $card-bg !important;
+      border-bottom: 1px solid #2d2d3d;
+      padding: 15px 30px !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $purple;
+      font-weight: bold;
+    }
+
+    .content {
+      padding: 30px;
+    }
+  }
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: $card-bg;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 20px;
+
+  th {
+    text-align: left;
+    padding: 15px;
+    background-color: #252533;
+    color: $purple;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  td {
+    padding: 15px;
+    border-bottom: 1px solid #2d2d3d;
+    color: $text-dim;
+  }
+
+  tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+}
+
+
+input {
+  background-color: #252533;
+  border: 1px solid #3d3d52;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  margin: 5px;
+  outline: none;
+
+  &:focus {
+    border-color: $purple;
+  }
+}
+
+button {
+  background-color: $purple;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $purple-hover;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+
+button:last-child { 
+  background-color: transparent;
+  color: #ff5555;
+  border: 1px solid #ff5555;
+  padding: 5px 12px;
+
+  &:hover {
+    background-color: #ff5555;
+    color: white;
+  }
+}
